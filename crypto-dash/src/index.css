@@ -30,8 +30,8 @@ a {
 }
 
 .coin-card {
+  position: relative;
   background-color: #161b22;
-  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
@@ -39,6 +39,40 @@ a {
 
 .coin-card:hover {
   transform: translateY(-5px);
+}
+
+.coin-card-link {
+  display: block;
+  padding: 1.5rem;
+}
+
+/* Favorite Star */
+.favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #aaa;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.favorite-btn:hover {
+  color: #f0f0f0;
+}
+
+.favorite-btn[aria-pressed='true'] {
+  color: #f5c518;
+}
+
+.favorite-btn:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
 }
 
 .coin-header {
@@ -103,6 +137,24 @@ a {
   background: #1c1f26;
   color: white;
   border: none;
+}
+
+.controls select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Favorites Toggle */
+.controls label:has(input[type='checkbox']) {
+  cursor: pointer;
+}
+
+.controls input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  accent-color: #f5c518;
+  cursor: pointer;
 }
 
 /* Filter Input */

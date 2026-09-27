@@ -1,10 +1,11 @@
-const LimitSelector = ({ limit, onLimitChange }) => {
+const LimitSelector = ({ limit, onLimitChange, disabled }) => {
   return (
     <div className='controls'>
       <label htmlFor='limit'>Show: </label>
       <select
         value={limit}
         id='limit'
+        disabled={disabled}
         onChange={(e) => onLimitChange(Number(e.target.value))}
       >
         <option value='5'>5</option>

@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router';
 import './index.css';
 import App from './App.jsx';
 import CoinsProvider from './context/CoinsProvider.jsx';
+import FavoritesProvider from './context/FavoritesProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <CoinsProvider>
-        <App />
-      </CoinsProvider>
+      <FavoritesProvider>
+        <CoinsProvider>
+          <App />
+        </CoinsProvider>
+      </FavoritesProvider>
     </BrowserRouter>
   </StrictMode>
 );

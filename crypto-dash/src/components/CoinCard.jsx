@@ -1,9 +1,20 @@
 import { Link } from 'react-router';
 
-const CoinCard = ({ coin }) => {
+const CoinCard = ({ coin, isFavorite, onToggleFavorite }) => {
   return (
-    <Link to={`/coin/${coin.id}`}>
-      <div className='coin-card'>
+    <div className='coin-card'>
+      <button
+        type='button'
+        className='favorite-btn'
+        onClick={onToggleFavorite}
+        aria-pressed={isFavorite}
+        aria-label={`${isFavorite ? 'Remove' : 'Add'} ${coin.name} ${
+          isFavorite ? 'from' : 'to'
+        } favorites`}
+      >
+        {isFavorite ? '★' : '☆'}
+      </button>
+      <Link to={`/coin/${coin.id}`} className='coin-card-link'>
         <div className='coin-header'>
           <img src={coin.image} alt={coin.name} className='coin-image' />
           <div>
@@ -20,8 +31,8 @@ const CoinCard = ({ coin }) => {
           {coin.price_change_percentage_24h.toFixed(2)} %
         </p>
         <p>Market Cap: {coin.market_cap.toLocaleString()}</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
