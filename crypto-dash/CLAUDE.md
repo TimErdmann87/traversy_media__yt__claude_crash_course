@@ -22,7 +22,7 @@ There is no test framework or test script.
 
 API base URLs come from Vite env vars in `.env`, read with `import.meta.env`:
 
-- `VITE_COINS_API_URL`: the markets list endpoint, which **already includes a query string** (`.../coins/markets?vs_currency=usd`). `App.jsx` appends more params with `&...`, so this URL must keep its `?`.
+- `VITE_COINS_API_URL`: the markets list endpoint, which **already includes a query string** (`.../coins/markets?vs_currency=usd`). `context/CoinsProvider.jsx` appends more params with `&...`, so this URL must keep its `?`.
 - `VITE_COIN_API_URL`: the base `.../coins`. Code appends `/${id}` for coin details and `/${id}/market_chart?...` for chart data.
 
 `.env` is not gitignored (only `*.local` is).
@@ -30,7 +30,7 @@ API base URLs come from Vite env vars in `.env`, read with `import.meta.env`:
 ## Architecture
 
 - **Routing:** React Router v7 in declarative mode. Import from `react-router`, not `react-router-dom`. `main.jsx` wraps the app in `BrowserRouter`, and `App.jsx` defines the routes: `/`, `/about`, `/coin/:id`, and a `*` 404 route.
-- **State for the coin list lives in `App.jsx`, not in the home page.** `App` fetches the coin list and owns `coins`, `limit`, `filter` and `sortBy`, then passes them all to `HomePage` as props. The list is fetched again only when `limit` changes. Filtering (by name or symbol) and sorting happen on the client in `pages/home.jsx`. The sort keys (`market_cap_desc`, `price_asc`, and so on) must match the option values in `components/SortSelector.jsx`.
+- **State for the coin list lives in a React context, not in the home page.** `context/CoinsProvider.jsx` fetches the coin list and owns `coins`, `loading`, `error`, `limit`, `filter` and `sortBy`. `main.jsx` wraps `App` in it, above the routes, so the state and the fetched coins survive navigating to a coin's page and back. `HomePage` reads them with the `useCoins()` hook from `context/coins-context.js`. The context and hook are in a separate file from the provider because of the `react-refresh/only-export-components` lint rule. The list is fetched again only when `limit` changes. Filtering (by name or symbol) and sorting happen on the client in `pages/home.jsx`. The sort keys (`market_cap_desc`, `price_asc`, and so on) must match the option values in `components/SortSelector.jsx`.
 - **The detail page and the chart fetch their own data:** `pages/coin-details.jsx` fetches the coin by the `:id` route param. `components/CoinChart.jsx` separately fetches 7 days of market chart data. It registers the Chart.js pieces it needs, including `TimeScale` with `chartjs-adapter-date-fns` for the time x-axis. Any new Chart.js chart type or scale must be registered there the same way.
 - **Data fetching** uses plain `fetch` inside `useEffect`, with local `loading` and `error` state. There is no data library or caching layer. `CoinChart` has no error handling.
 - **Styling** is a single global stylesheet, `src/index.css`, with a dark theme. Components use its class names (`coin-card`, `grid`, `top-controls`, `coin-details-*`, `positive`/`negative`, `error`). There are no CSS modules or CSS-in-JS.
