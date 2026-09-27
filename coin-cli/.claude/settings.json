@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)"
+    ],
+    "ask": [
+      "Bash(uv run *)"
+    ],
+    "allow": [
+      "Bash(npm start *)"
+    ]
+  }
+}

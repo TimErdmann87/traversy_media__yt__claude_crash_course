@@ -1,0 +1,17 @@
+{
+  "name": "coin-cli",
+  "version": "1.0.0",
+  "description": "Prints the top 5 cryptocurrency prices from CoinGecko in a terminal table",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "coin-cli": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
