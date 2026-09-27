@@ -1,0 +1,4 @@
+# Office lock files (e.g. ~$Notes.pptx while the deck is open)
+~$*
+
+node_modules/
