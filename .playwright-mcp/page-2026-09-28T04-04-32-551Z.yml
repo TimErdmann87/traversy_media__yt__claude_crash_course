@@ -1,0 +1,31 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - link "About" [ref=e5] [cursor=pointer]:
+      - /url: /about
+  - generic [ref=e6]:
+    - heading "🚀 Crypto Dash" [level=1] [ref=e7]
+    - generic "Loading..." [ref=e9]
+    - generic [ref=e11]:
+      - textbox "Filter coins by name or symbol" [ref=e13]
+      - generic [ref=e15] [cursor=pointer]:
+        - checkbox "★ Favorites only (0)" [ref=e16]
+        - text: ★ Favorites only (0)
+      - generic [ref=e17]:
+        - generic [ref=e18]: "Show:"
+        - combobox "Show:" [ref=e19]:
+          - option "5"
+          - option "10" [selected]
+          - option "20"
+          - option "50"
+          - option "100"
+      - generic [ref=e20]:
+        - generic [ref=e21]: "Sort By:"
+        - combobox "Sort By:" [ref=e22]:
+          - option "Market Cap (High To Low)" [selected]
+          - option "Market Cap (Low To High)"
+          - option "Price (High To Low)"
+          - option "Price (Low To High)"
+          - option "24h Change (High To Low)"
+          - option "24h Change (Low To High)"

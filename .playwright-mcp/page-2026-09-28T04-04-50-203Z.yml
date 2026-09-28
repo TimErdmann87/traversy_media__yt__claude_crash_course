@@ -1,0 +1,151 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - link "About" [ref=e5] [cursor=pointer]:
+      - /url: /about
+  - generic [ref=e6]:
+    - heading "🚀 Crypto Dash" [level=1] [ref=e7]
+    - generic [ref=e11]:
+      - textbox "Filter coins by name or symbol" [ref=e13]
+      - generic [ref=e15] [cursor=pointer]:
+        - checkbox "★ Favorites only (1)" [ref=e134]
+        - text: ★ Favorites only (1)
+      - generic [ref=e17]:
+        - generic [ref=e18]: "Show:"
+        - combobox "Show:" [ref=e19]:
+          - option "5"
+          - option "10" [selected]
+          - option "20"
+          - option "50"
+          - option "100"
+      - generic [ref=e20]:
+        - generic [ref=e21]: "Sort By:"
+        - combobox "Sort By:" [ref=e22]:
+          - option "Market Cap (High To Low)" [selected]
+          - option "Market Cap (Low To High)"
+          - option "Price (High To Low)"
+          - option "Price (Low To High)"
+          - option "24h Change (High To Low)"
+          - option "24h Change (Low To High)"
+    - main [ref=e23]:
+      - generic [ref=e24]:
+        - button "Remove Bitcoin from favorites" [active] [pressed] [ref=e135] [cursor=pointer]: ★
+        - link [ref=e26] [cursor=pointer]:
+          - /url: /coin/bitcoin
+          - generic [ref=e27]:
+            - img "Bitcoin" [ref=e28]
+            - generic [ref=e29]:
+              - heading "Bitcoin" [level=2] [ref=e30]
+              - paragraph [ref=e31]: BTC
+          - paragraph [ref=e32]: "Price: $83,265"
+          - paragraph [ref=e33]: "-1.31 %"
+          - paragraph [ref=e34]: "Market Cap: 1,672,728,746,573"
+      - generic [ref=e35]:
+        - button "Add Ethereum to favorites" [ref=e36] [cursor=pointer]: ☆
+        - link [ref=e37] [cursor=pointer]:
+          - /url: /coin/ethereum
+          - generic [ref=e38]:
+            - img "Ethereum" [ref=e39]
+            - generic [ref=e40]:
+              - heading "Ethereum" [level=2] [ref=e41]
+              - paragraph [ref=e42]: ETH
+          - paragraph [ref=e43]: "Price: $2,648.91"
+          - paragraph [ref=e44]: "-1.69 %"
+          - paragraph [ref=e45]: "Market Cap: 323,428,410,611"
+      - generic [ref=e46]:
+        - button "Add Tether to favorites" [ref=e47] [cursor=pointer]: ☆
+        - link [ref=e48] [cursor=pointer]:
+          - /url: /coin/tether
+          - generic [ref=e49]:
+            - img "Tether" [ref=e50]
+            - generic [ref=e51]:
+              - heading "Tether" [level=2] [ref=e52]
+              - paragraph [ref=e53]: USDT
+          - paragraph [ref=e54]: "Price: $1"
+          - paragraph [ref=e55]: 0.00 %
+          - paragraph [ref=e56]: "Market Cap: 183,779,218,392"
+      - generic [ref=e57]:
+        - button "Add BNB to favorites" [ref=e58] [cursor=pointer]: ☆
+        - link [ref=e59] [cursor=pointer]:
+          - /url: /coin/binancecoin
+          - generic [ref=e60]:
+            - img "BNB" [ref=e61]
+            - generic [ref=e62]:
+              - heading "BNB" [level=2] [ref=e63]
+              - paragraph [ref=e64]: BNB
+          - paragraph [ref=e65]: "Price: $769.19"
+          - paragraph [ref=e66]: "-0.26 %"
+          - paragraph [ref=e67]: "Market Cap: 102,436,018,821"
+      - generic [ref=e68]:
+        - button "Add XRP to favorites" [ref=e69] [cursor=pointer]: ☆
+        - link [ref=e70] [cursor=pointer]:
+          - /url: /coin/ripple
+          - generic [ref=e71]:
+            - img "XRP" [ref=e72]
+            - generic [ref=e73]:
+              - heading "XRP" [level=2] [ref=e74]
+              - paragraph [ref=e75]: XRP
+          - paragraph [ref=e76]: "Price: $1.49"
+          - paragraph [ref=e77]: "-1.81 %"
+          - paragraph [ref=e78]: "Market Cap: 93,480,195,285"
+      - generic [ref=e79]:
+        - button "Add USDC to favorites" [ref=e80] [cursor=pointer]: ☆
+        - link [ref=e81] [cursor=pointer]:
+          - /url: /coin/usd-coin
+          - generic [ref=e82]:
+            - img "USDC" [ref=e83]
+            - generic [ref=e84]:
+              - heading "USDC" [level=2] [ref=e85]
+              - paragraph [ref=e86]: USDC
+          - paragraph [ref=e87]: "Price: $1"
+          - paragraph [ref=e88]: "-0.00 %"
+          - paragraph [ref=e89]: "Market Cap: 75,143,149,598"
+      - generic [ref=e90]:
+        - button "Add Solana to favorites" [ref=e91] [cursor=pointer]: ☆
+        - link [ref=e92] [cursor=pointer]:
+          - /url: /coin/solana
+          - generic [ref=e93]:
+            - img "Solana" [ref=e94]
+            - generic [ref=e95]:
+              - heading "Solana" [level=2] [ref=e96]
+              - paragraph [ref=e97]: SOL
+          - paragraph [ref=e98]: "Price: $119.41"
+          - paragraph [ref=e99]: "-0.88 %"
+          - paragraph [ref=e100]: "Market Cap: 70,212,272,533"
+      - generic [ref=e101]:
+        - button "Add TRON to favorites" [ref=e102] [cursor=pointer]: ☆
+        - link [ref=e103] [cursor=pointer]:
+          - /url: /coin/tron
+          - generic [ref=e104]:
+            - img "TRON" [ref=e105]
+            - generic [ref=e106]:
+              - heading "TRON" [level=2] [ref=e107]
+              - paragraph [ref=e108]: TRX
+          - paragraph [ref=e109]: "Price: $0.334"
+          - paragraph [ref=e110]: 0.33 %
+          - paragraph [ref=e111]: "Market Cap: 31,698,886,146"
+      - generic [ref=e112]:
+        - button "Add Zcash to favorites" [ref=e113] [cursor=pointer]: ☆
+        - link [ref=e114] [cursor=pointer]:
+          - /url: /coin/zcash
+          - generic [ref=e115]:
+            - img "Zcash" [ref=e116]
+            - generic [ref=e117]:
+              - heading "Zcash" [level=2] [ref=e118]
+              - paragraph [ref=e119]: ZEC
+          - paragraph [ref=e120]: "Price: $1,552.37"
+          - paragraph [ref=e121]: "-4.99 %"
+          - paragraph [ref=e122]: "Market Cap: 26,327,462,836"
+      - generic [ref=e123]:
+        - button "Add Figure Heloc to favorites" [ref=e124] [cursor=pointer]: ☆
+        - link [ref=e125] [cursor=pointer]:
+          - /url: /coin/figure-heloc
+          - generic [ref=e126]:
+            - img "Figure Heloc" [ref=e127]
+            - generic [ref=e128]:
+              - heading "Figure Heloc" [level=2] [ref=e129]
+              - paragraph [ref=e130]: FIGR_HELOC
+          - paragraph [ref=e131]: "Price: $1.058"
+          - paragraph [ref=e132]: "-0.39 %"
+          - paragraph [ref=e133]: "Market Cap: 24,516,003,984"
