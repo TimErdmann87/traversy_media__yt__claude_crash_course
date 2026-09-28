@@ -8,7 +8,12 @@
       "mcp__playwright__browser_click",
       "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_console_messages",
-      "PowerShell(git check-ignore -v .playwright-mcp/favorites-filter.png)"
+      "PowerShell(git diff:*)",
+      "PowerShell(git status:*)",
+      "PowerShell(git ls-files:*)",
+      "Bash(git diff:*)",
+      "Bash(git status:*)",
+      "Bash(git ls-files:*)"
     ]
   }
 }
